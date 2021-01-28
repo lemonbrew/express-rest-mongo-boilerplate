@@ -7,7 +7,7 @@
  * @apiVersion 1.0.0 
  * @apiParam {String} license_number 
  * @apiExample {curl} Example usage:
- * curl http:localhost:3040/1234 
+ * curl http:localhost:3040/agent/1234 
  * @apiSuccess {Object} result agent object 
  * @apiSuccessExample {json} Success response:
  *   HTTPS 200 OK
