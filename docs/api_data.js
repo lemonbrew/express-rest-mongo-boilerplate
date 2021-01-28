@@ -22,7 +22,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl http:localhost:3040/1234",
+        "content": "curl http:localhost:3040/agent/1234",
         "type": "curl"
       }
     ],
