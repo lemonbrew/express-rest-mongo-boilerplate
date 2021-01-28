@@ -1,8 +1,8 @@
+require(`dotenv`).config() // load env vars from .env file
 const { log } = console
-, app = require(`express`)()
-, bodyParser = require(`body-parser`)
-, controller = require(`./controllers`)
-;
+const app = require(`express`)()
+const bodyParser = require(`body-parser`)
+const controller = require(`./controllers`)
 
 console.log(controller)
 app.use(bodyParser.json()) // to be able to receive json in requests
