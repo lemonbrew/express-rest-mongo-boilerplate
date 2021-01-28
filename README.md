@@ -21,3 +21,8 @@ Includes: <br>
 
 ## Update Documentation
 `npm run doc`
+
+### Removing apiDocs
+If you don't want to use apiDocs, it's very simple to remove
+- delete root level docs folder
+- remove `doc` npm script and dev dependency `apiDoc` from package.json
