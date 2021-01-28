@@ -2,10 +2,12 @@
   "name": "simple-express-boilerplate",
   "version": "1.0.0",
   "description": "a simple express boilerplate",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "doc": "apidoc -i src/",
+    "dev": "nodemon server.js"
   },
   "keywords": [
     "node",
@@ -19,6 +21,15 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "apidoc": "^0.26.0",
     "nodemon": "^2.0.7"
+  },
+  "apidoc": {
+    "name": "Express REST Boilerplate",
+    "version": "1.0.0",
+    "description": "Boilerplate for REST apps",
+    "title": "docs",
+    "url" : "http://localhost:3040",
+    "sampleUrl" : "http://localhost:3040"
   }
 }

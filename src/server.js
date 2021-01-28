@@ -4,11 +4,10 @@ const app = require(`express`)()
 const bodyParser = require(`body-parser`)
 const controller = require(`./controllers`)
 
-console.log(controller)
 app.use(bodyParser.json()) // to be able to receive json in requests
 
-app.get('/', controller.hello)
-app.post('/', controller.postName)
+app.get('/:name', controller.getExample)
+app.post('/', controller.postExample)
 
 app.set('port', 3040)
 app.listen(app.get('port'), function () {
