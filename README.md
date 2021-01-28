@@ -1,4 +1,10 @@
 # express-rest-boilerplate
+A very simple boiler plate for express apps
+
+Includes: <br>
+<a href="https://www.npmjs.com/package/nodemon">nodemon</a> for rapid development<br>
+<a href="https://www.npmjs.com/package/dotenv">dotenv</a> for environment variable support<br>
+<a href="https://www.npmjs.com/package/apidoc">apiDoc</a> for documenting your api
 
 ## Start
 `git clone git@github.com:cotterjd/simple-express-boilerplate.git`<br>
@@ -12,3 +18,6 @@
 
 ## Develop
 `npm run dev`
+
+## Update Documentation
+`npm run doc`
