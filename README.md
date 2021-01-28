@@ -1,4 +1,4 @@
-# simple-express-boilerplate
+# express-rest-boilerplate
 
 ## Start
 `git clone git@github.com:cotterjd/simple-express-boilerplate.git`<br>
