@@ -8,6 +8,7 @@ console.log(controller)
 app.use(bodyParser.json()) // to be able to receive json in requests
 
 app.get('/', controller.hello)
+app.post('/', controller.postName)
 
 app.set('port', 3040)
 app.listen(app.get('port'), function () {

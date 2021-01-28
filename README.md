@@ -6,4 +6,6 @@
 `npm start`<br>
 
 ## Use
-`curl http://localhost:3000`
+`curl http://localhost:3040`</br>
+
+`curl -X POST -H "Content-Type: application/json" -d "{\"name\": \"jon\" }" http://localhost:3040`
