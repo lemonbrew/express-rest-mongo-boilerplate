@@ -1,10 +1,10 @@
 [
   {
     "type": "get",
-    "url": "/:name",
+    "url": "/agent/:license_number",
     "title": "",
-    "name": "getExample",
-    "group": "example",
+    "name": "getAgent",
+    "group": "mls",
     "version": "1.0.0",
     "parameter": {
       "fields": {
@@ -13,7 +13,7 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "name",
+            "field": "license_number",
             "description": ""
           }
         ]
@@ -22,75 +22,31 @@
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl http:localhost:3040/jon?foo=bar",
+        "content": "curl http:localhost:3040/1234",
         "type": "curl"
       }
     ],
     "success": {
       "fields": {
         "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "param",
-            "description": "<p>param sent</p>"
-          },
           {
             "group": "Success 200",
             "type": "Object",
             "optional": false,
-            "field": "query",
-            "description": "<p>query object</p>"
+            "field": "result",
+            "description": "<p>agent object</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success response:",
-          "content": "HTTPS 200 OK\n{\n  \"param\": \"jon\",\n  \"query\": { \"foo\": \"bar\" } \n}",
+          "content": "HTTPS 200 OK\n{\n  \"result\": {\n    \"license_number\": \"\",\n    \"biography\": \"\",\n    \"designations\": \"\",\n    \"facebook_url\": \"\",\n    \"name\": {\n      \"first\": \"\",\n      \"middle\": \"\",\n      \"last\": \"\"\n    },\n    \"photo_url\": \"\",\n    \"status\": {\n      \"name\": \"Active\",\n      \"date\": \"\"\n    }\n  } \n}",
           "type": "json"
         }
       ]
     },
     "filename": "src/docs.js",
-    "groupTitle": "example"
-  },
-  {
-    "type": "post",
-    "url": "/",
-    "title": "",
-    "name": "postExample",
-    "group": "example",
-    "version": "1.0.0",
-    "examples": [
-      {
-        "title": "Example usage:",
-        "content": "curl httphttp://localhost:3040Type: application/json\" -d \"{\\-X POST -H \"Content-Type: application/json\" -d \"{\\\"name\\\": \\\"jon\\\" }\" http://localhost:3040",
-        "type": "curl"
-      }
-    ],
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "name",
-            "description": "<p>Name sent</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Success response:",
-          "content": "HTTPS 200 OK\n{\n  \"name\": \"jon\",\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "filename": "src/docs.js",
-    "groupTitle": "example"
+    "groupTitle": "mls"
   }
 ]

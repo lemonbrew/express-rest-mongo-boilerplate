@@ -1,34 +1,32 @@
 /* DOCUMENT ROUTES HERE */
 
 /**
- * @api {get} /:name 
- * @apiName getExample
- * @apiGroup example
+ * @api {get} /agent/:license_number 
+ * @apiName getAgent
+ * @apiGroup mls
  * @apiVersion 1.0.0 
- * @apiParam {String} name 
+ * @apiParam {String} license_number 
  * @apiExample {curl} Example usage:
- * curl http:localhost:3040/jon?foo=bar 
- * @apiSuccess {String} param param sent
- * @apiSuccess {Object} query query object 
+ * curl http:localhost:3040/1234 
+ * @apiSuccess {Object} result agent object 
  * @apiSuccessExample {json} Success response:
  *   HTTPS 200 OK
  *   {
- *     "param": "jon",
- *     "query": { "foo": "bar" } 
+ *     "result": {
+ *       "license_number": "",
+ *       "biography": "",
+ *       "designations": "",
+ *       "facebook_url": "",
+ *       "name": {
+ *         "first": "",
+ *         "middle": "",
+ *         "last": ""
+ *       },
+ *       "photo_url": "",
+ *       "status": {
+ *         "name": "Active",
+ *         "date": ""
+ *       }
+ *     } 
  *   }
- */
-
-/**
- * @api {post} /
- * @apiName postExample
- * @apiGroup example
- * @apiVersion 1.0.0 
- * @apiExample {curl} Example usage:
- * curl httphttp://localhost:3040Type: application/json" -d "{\-X POST -H "Content-Type: application/json" -d "{\"name\": \"jon\" }" http://localhost:3040
- * @apiSuccess {String} name Name sent 
- * @apiSuccessExample {json} Success response:
- *  HTTPS 200 OK
- *  {
- *    "name": "jon",
- *  }
  */

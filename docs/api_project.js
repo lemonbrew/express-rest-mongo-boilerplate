@@ -1,13 +1,14 @@
 define({
-  "name": "Express REST Boilerplate",
+  "name": "MLS Service",
   "version": "1.0.0",
-  "description": "Boilerplate for REST apps",
+  "description": "Returns MLS data",
+  "title": "mls docs",
   "sampleUrl": false,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2021-01-28T21:33:35.507Z",
+    "time": "2021-01-28T23:16:01.822Z",
     "url": "https://apidocjs.com",
     "version": "0.26.0"
   }

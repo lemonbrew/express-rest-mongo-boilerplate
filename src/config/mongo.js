@@ -19,7 +19,7 @@ const initDb = (cb) => {
   client.connect((err, db) => {
     if (err) return cb(err)
 
-    _db = db.db(`my-db`)
+    _db = db.db(`mls-data`)
     return cb(null, _db)
   })
 }

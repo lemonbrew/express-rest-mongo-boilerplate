@@ -7,8 +7,7 @@ const mongo = require(`./config/mongo`)
 
 app.use(bodyParser.json()) // to be able to receive json in requests
 
-app.get('/:name', controller.getExample)
-app.post('/', controller.postExample)
+app.get('/agent/:license_number', controller.getAgent)
 
 app.set('port', 3040)
 mongo.initDb((err, _) => {
