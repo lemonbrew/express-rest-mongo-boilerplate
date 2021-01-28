@@ -1,15 +1,18 @@
 # express-rest-boilerplate
-A very simple boiler plate for express apps
+A simple boiler plate for express and mongo
 
 Includes: <br>
 <a href="https://www.npmjs.com/package/nodemon">nodemon</a> for rapid development<br>
 <a href="https://www.npmjs.com/package/dotenv">dotenv</a> for environment variable support<br>
-<a href="https://www.npmjs.com/package/apidoc">apiDoc</a> for documenting your api
+<a href="https://www.npmjs.com/package/apidoc">apiDoc</a> for documenting your api<br>
+<a href="https://www.npmjs.com/package/mongodb">mongodb</a> for interfacing with mongo. 
 
 ## Start
-`git clone git@github.com:cotterjd/simple-express-boilerplate.git`<br>
-`npm install` <br>
-`npm start`<br>
+- `git clone git@github.com:cotterjd/simple-express-boilerplate.git`<br>
+- `npm install` <br>
+- add `.env` file based off `.env.example` with mongo connection string
+- replace "my-db" with name of your actual database name in `src/config/mongo.js`
+- `npm start`<br>
 
 ## Use
 `curl http://localhost:3040`</br>
