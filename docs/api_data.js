@@ -53,13 +53,8 @@ define({ "api": [
         }
       ]
     },
-    "filename": "src/controllers/index.js",
-    "groupTitle": "example",
-    "sampleRequest": [
-      {
-        "url": "http://localhost:3040/:name"
-      }
-    ]
+    "filename": "src/docs.js",
+    "groupTitle": "example"
   },
   {
     "type": "post",
@@ -95,12 +90,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "src/controllers/index.js",
-    "groupTitle": "example",
-    "sampleRequest": [
-      {
-        "url": "/"
-      }
-    ]
+    "filename": "src/docs.js",
+    "groupTitle": "example"
   }
 ] });

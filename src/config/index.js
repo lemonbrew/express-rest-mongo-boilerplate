@@ -1,3 +1,3 @@
 module.exports = {
-  // assign env vars from .env file here
+  mongoConnection: process.env.MONGO_CONN
 }

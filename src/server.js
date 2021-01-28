@@ -3,6 +3,7 @@ const { log } = console
 const app = require(`express`)()
 const bodyParser = require(`body-parser`)
 const controller = require(`./controllers`)
+const mongo = require(`./config/mongo`)
 
 app.use(bodyParser.json()) // to be able to receive json in requests
 
@@ -10,6 +11,9 @@ app.get('/:name', controller.getExample)
 app.post('/', controller.postExample)
 
 app.set('port', 3040)
-app.listen(app.get('port'), function () {
-  console.log('Node app is running on port', app.get('port'))
+mongo.initDb((err, _) => {
+  if (err) console.error(err)
+  else app.listen(app.get('port'), function () {
+    console.log('Node app is running on port', app.get('port'))
+  })
 })
