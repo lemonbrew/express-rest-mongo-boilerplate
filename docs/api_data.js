@@ -43,17 +43,17 @@ define({ "api": [
       "examples": [
         {
           "title": "Success response:",
-          "content": "HTTPS 200 OK\n{\n  result: {\n    license_number: \"\",\n    biography: \"\",\n    designations: \"\",\n    facebook_url: \"\",\n    name: {\n      first: \"\",\n      middle: \"\",\n      last: \"\"\n    },\n    photo_url: \"\",\n    status: {\n      name: \"Active\",\n      date: \"\"\n    }\n  } \n}",
+          "content": "HTTPS 200 OK\n{\n  msg: \"Successfully matched agent!\",\n  result: {\n    license_number: \"1234\",\n    biography: \"\",\n    designations: \"\",\n    facebook_url: \"\",\n    name: {\n      first: \"\",\n      middle: \"\",\n      last: \"\"\n    },\n    photo_url: \"\",\n    status: {\n      name: \"Active\",\n      date: \"\"\n    }\n  } \n}",
           "type": "json"
         },
         {
-          "title": "Not found response:",
-          "content": "HTTPS 404 Not Found \n{\n  result: null\n}",
+          "title": "Agent not found response:",
+          "content": "HTTPS 200 OK \n{\n  msg: \"No agent found for license_number '1234'\",\n  result: null\n}",
           "type": "json"
         },
         {
           "title": "Multiple agents found response:",
-          "content": "HTTPS 200 OK \n{\n  error: 'More than one agent has license_number of \"1234\".' \n  agents: [{\n    license_number: \"1234\",\n    biography: \"\",\n    designations: \"\",\n    facebook_url: \"\",\n    name: {\n      first: \"Agent\",\n      middle: \"\",\n      last: \"One\"\n    },\n    photo_url: \"\",\n    status: {\n      name: \"Active\",\n      date: \"\"\n    }\n  },\n  {\n    license_number: \"1234\",\n    biography: \"\",\n    designations: \"\",\n    facebook_url: \"\",\n    name: {\n      first: \"Agent\",\n      middle: \"\",\n      last: \"Two\"\n    },\n    photo_url: \"\",\n    status: {\n      name: \"Active\",\n      date: \"\"\n    }\n  }]",
+          "content": "HTTPS 200 OK \n{\n  msg: 'More than one agent has license_number \"1234\".' \n  agents: [{\n    license_number: \"1234\",\n    biography: \"\",\n    designations: \"\",\n    facebook_url: \"\",\n    name: {\n      first: \"Agent\",\n      middle: \"\",\n      last: \"One\"\n    },\n    photo_url: \"\",\n    status: {\n      name: \"Active\",\n      date: \"\"\n    }\n  },\n  {\n    license_number: \"1234\",\n    biography: \"\",\n    designations: \"\",\n    facebook_url: \"\",\n    name: {\n      first: \"Agent\",\n      middle: \"\",\n      last: \"Two\"\n    },\n    photo_url: \"\",\n    status: {\n      name: \"Active\",\n      date: \"\"\n    }\n  }]",
           "type": "json"
         }
       ]

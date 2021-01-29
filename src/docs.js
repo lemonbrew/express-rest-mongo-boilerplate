@@ -21,8 +21,9 @@
  * @apiSuccessExample {json} Success response:
  *   HTTPS 200 OK
  *   {
+ *     msg: "Successfully matched agent!",
  *     result: {
- *       license_number: "",
+ *       license_number: "1234",
  *       biography: "",
  *       designations: "",
  *       facebook_url: "",
@@ -44,6 +45,7 @@
  * @apiSuccessExample {json} Agent not found response:
  *   HTTPS 200 OK 
  *   {
+ *     msg: "No agent found for license_number '1234'",
  *     result: null
  *   }
  */
@@ -52,7 +54,7 @@
  * @apiSuccessExample {json} Multiple agents found response:
  *   HTTPS 200 OK 
  *   {
- *     error: 'More than one agent has license_number of "1234".' 
+ *     msg: 'More than one agent has license_number "1234".' 
  *     agents: [{
  *       license_number: "1234",
  *       biography: "",

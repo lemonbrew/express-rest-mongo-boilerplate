@@ -12,14 +12,22 @@ const getAgent = async (req, res) => {
     )
     .toArray()
 
-  const payload = 
-    agents.length > 1 ? {
-      error: `More than one agent has license_number of "${ln}".`,
+  if (agents.length > 1) {
+    return res.json({
+      msg: `More than one agent has license_number "${ln}".`,
       agents, 
-    } : {
-      result: agents[0] || null,
-    }
-  return res.json(payload)
+    })
+  } else if (!agents.length) {
+    return res.json({
+      msg: `No agent found for license_number "${ln}".`,
+      result: null
+    })
+  } else {
+    return res.json({
+      msg: `Successfully matched agent!`,
+      result: agents[0]
+    })
+  }
 }
 
 function getProjection () {
