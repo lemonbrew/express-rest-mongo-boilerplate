@@ -16,7 +16,7 @@
 /* RESPONSE DEFINITIONS */
 
 /**
- * @apiDefine Success Successfully retrieve an agent 
+ * @apiDefine Success Successfully retrieved an agent 
  * @apiSuccess {Object} result agent object of given <code>license_number</code>
  * @apiSuccessExample {json} Success response:
  *   HTTPS 200 OK
@@ -41,8 +41,8 @@
  */
 /**
  * @apiDefine NotFound No agent matches license_number 
- * @apiSuccessExample {json} Not found response:
- *   HTTPS 404 Not Found 
+ * @apiSuccessExample {json} Agent not found response:
+ *   HTTPS 200 OK 
  *   {
  *     result: null
  *   }
