@@ -1,7 +1,7 @@
 # lemonbrew-mls-service
 Returns mls data
 
-<a href="https://lemonbrew.github.io/lemonbrew-mls-service/">API Documentation</a>
+<a href="https://lemonbrew.github.io/mls-data-access-service/">API Documentation</a>
 
 ## Start
 - `git clone git@github.com:cotterjd/simple-express-boilerplate.git`<br>
