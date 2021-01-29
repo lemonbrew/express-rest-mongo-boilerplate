@@ -1,10 +1,11 @@
 require(`dotenv`).config() // load env vars from .env file
-const { log } = console
 const app = require(`express`)()
 const bodyParser = require(`body-parser`)
 const controller = require(`./controllers`)
 const mongo = require(`./config/mongo`)
+const cors = require(`cors`)
 
+app.use(cors())
 app.use(bodyParser.json()) // to be able to receive json in requests
 
 app.get('/agent/:license_number', controller.getAgent)
