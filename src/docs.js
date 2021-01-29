@@ -17,7 +17,7 @@
 
 /**
  * @apiDefine Success Successfully retrieved an agent 
- * @apiSuccess {Object} result agent object of given <code>license_number</code>
+ * @apiSuccess {Object} result agent object for given <code>license_number</code>
  * @apiSuccessExample {json} Success response:
  *   HTTPS 200 OK
  *   {
@@ -33,10 +33,8 @@
  *         last: ""
  *       },
  *       photo_url: "",
- *       status: {
- *         name: "Active",
- *         date: ""
- *       }
+ *       email: "",
+ *       cell_phone: ""
  *     } 
  *   }
  */
@@ -66,10 +64,8 @@
  *         last: "One"
  *       },
  *       photo_url: "",
- *       status: {
- *         name: "Active",
- *         date: ""
- *       }
+ *       email: "",
+ *       cell_phone: ""
  *     },
  *     {
  *       license_number: "1234",
@@ -82,9 +78,7 @@
  *         last: "Two"
  *       },
  *       photo_url: "",
- *       status: {
- *         name: "Active",
- *         date: ""
- *       }
+ *       email: "",
+ *       cell_phone: ""
  *     }] 
  */

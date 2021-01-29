@@ -1,4 +1,7 @@
 const client = require(`../config/mongo`)
+
+// IDEA: make sure you are searching by type (Broker vs Realtor). Can a person who is both share the same license_number? 
+// will adding type to query make it faster?  
 const getAgent = async (req, res) => {
   const db = client.getDb()
   const ln = req.params.license_number 
@@ -38,7 +41,8 @@ function getProjection () {
     facebook_url: 1,
     name: 1,
     photo_url: 1,
-    status: 1,
+    cell_phone: 1,
+    email: 1
   }
 }
 
