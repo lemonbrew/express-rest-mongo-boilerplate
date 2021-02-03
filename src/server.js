@@ -10,10 +10,12 @@ app.use(bodyParser.json()) // to be able to receive json in requests
 
 app.get('/agent/:license_number', controller.getAgent)
 
-app.set('port', 3040)
+app.set('port', process.env.NODE_ENV === `test` ? 3041 : 3040)
 mongo.initDb((err, _) => {
   if (err) console.error(err)
   else app.listen(app.get('port'), function () {
     console.log('Node app is running on port', app.get('port'))
   })
 })
+
+module.exports = app
